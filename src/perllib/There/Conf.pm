@@ -42,7 +42,7 @@ sub new
      therepath => qr/^(.*)$/,
     );
 
-    $self->define("therepath|there|t=s", { DEFAULT => "/data00/there" } );
+    $self->define("therepath|there|t=s", { DEFAULT => "/opt/there" } );
     $self->define("algofilename=s", { DEFAULT => ".alcometer" } );
     $self->define("passphraseid=s", { DEFAULT => ".passphrase" } );
     $self->define("storage=s", { DEFAULT => "There::Storage::Default" } );

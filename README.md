@@ -88,13 +88,14 @@ To update an existing password, you need to
     * Digest::SHA
     * Object::Generic
     * AppConfig
+    * Sys::Syslog
 
 
 ## Install There
 
 ```shell
-mkdir -p /data00/there
-chmod a+rwx,g+s /data00/there
+mkdir -p /opt/there
+chmod a+rwx,g+s /opt/there
 
 git clone https://.../
 make wrapper
@@ -106,7 +107,7 @@ sudo make install
 
 ```shell
 sudo make uninstall
-rm -rf /data00/there
+rm -rf /opt/there
 ```
 
 # Backup
@@ -117,5 +118,5 @@ To create a read-only backup copy on another machine, install There to
 another machine and add this to crontab on the backup host.
 
 ```
-*/15 * * * * rsync -ae ssh --chmod=a-w masterhost:/data00/there /data00/
+*/15 * * * * rsync -ae ssh --chmod=a-w masterhost:/opt/there /opt/
 ```
